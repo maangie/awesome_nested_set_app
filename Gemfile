@@ -15,7 +15,7 @@ gem 'uglifier', '>= 1.3.0' # Use Uglifier as compressor for JavaScript assets
 gem 'coffee-rails', '~> 4.1.0' # Use CoffeeScript for .coffee assets and views
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 gem 'jquery-rails' # Use jquery as the JavaScript library
 
@@ -36,6 +36,13 @@ gem 'redis', '~> 3.0' # Action Cable dependencies for the Redis adapter
 
 # An awesome replacement for acts_as_nested_set and better_nested_set.
 gem 'awesome_nested_set'
+
+# Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "less-rails"
+
+# Twitter Bootstrap for Rails 3.x - 4 Asset Pipeline
+# https://github.com/seyhunak/twitter-bootstrap-rails
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
