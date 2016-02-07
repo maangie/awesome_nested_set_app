@@ -2,10 +2,11 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <% options = nested_set_options(Category) do |i|
+    "#{'-' * i.level} #{i.label}"
+    end %>
+    <%= f.input :parent_id, collection: options %>
     <%= f.input :label %>
-    <%= f.input :parent_id %>
-    <%= f.input :lft %>
-    <%= f.input :rgt %>
   </div>
 
   <div class="form-actions">
