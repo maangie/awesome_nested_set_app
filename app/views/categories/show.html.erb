@@ -21,27 +21,40 @@
   <%= render "submenu_pages", pages: @category.root.children %>
 </div>
 
-<p id="notice"><%= notice %></p>
+<div class="col-md-8">
+  <ol class="breadcrumb">
+    <% @category.ancestors.each do |category| %>
+      <li>
+        <%= link_to_unless_current category.label, category %>
+      </li>
+    <% end %>
+    <li>
+      <%= @category.label %>
+    </li>
+  </ol>
 
-<p>
-  <strong>Label:</strong>
-  <%= @category.label %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Parent:</strong>
-  <%= @category.parent_id %>
-</p>
+  <p>
+    <strong>Label:</strong>
+    <%= @category.label %>
+  </p>
 
-<p>
-  <strong>Lft:</strong>
-  <%= @category.lft %>
-</p>
+  <p>
+    <strong>Parent:</strong>
+    <%= @category.parent_id %>
+  </p>
 
-<p>
-  <strong>Rgt:</strong>
-  <%= @category.rgt %>
-</p>
+  <p>
+    <strong>Lft:</strong>
+    <%= @category.lft %>
+  </p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+  <p>
+    <strong>Rgt:</strong>
+    <%= @category.rgt %>
+  </p>
+
+  <%= link_to 'Edit', edit_category_path(@category) %> |
+  <%= link_to 'Back', categories_path %>
+</div>
