@@ -1,3 +1,22 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="containe-fluid">
+    <div class="navbar-header">
+      <%= link_to "Home", root_path, class: "navbar-brand" %>
+    </div>
+    <ul class="nav navbar-nav">
+      <% Category.all.roots.each do |category| %>
+        <% if @category.root == category %>
+          <li class="active">
+        <% else %>
+          <li>
+        <% end %>
+        <%= link_to category.label, category %>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+
 <p id="notice"><%= notice %></p>
 
 <p>
