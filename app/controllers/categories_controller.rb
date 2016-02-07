@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  include TheSortableTreeController::Rebuild
+ 
   before_action :set_category, only: [:show, :edit, :update, :destroy]
 
   # GET /categories
@@ -76,6 +78,10 @@ class CategoriesController < ApplicationController
       end
       format.json { head :no_content }
     end
+  end
+
+  def manage
+    @categories = Category.nested_set.select('id, label, parent_id').all
   end
 
   private

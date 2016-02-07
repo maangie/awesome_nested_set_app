@@ -21,6 +21,12 @@
   <%= render "submenu_pages", pages: @category.root.children %>
 </div>
 
+<% if false %>
+<ol class="sortable_tree" data-rebuild_url="<%= rebuild_categories_url %>">
+  <%= sortable_tree @categories, title: :label %>
+</ol>
+<% end %>
+
 <div class="col-md-8">
   <ol class="breadcrumb">
     <% @category.ancestors.each do |category| %>

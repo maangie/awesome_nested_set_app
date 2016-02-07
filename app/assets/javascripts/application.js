@@ -15,6 +15,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//
+//= require jquery.ui.nestedSortable
+//= require sortable_tree/initializer
+//
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .

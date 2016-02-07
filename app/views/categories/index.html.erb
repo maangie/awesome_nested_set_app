@@ -2,6 +2,10 @@
 
 <h1>Categories</h1>
 
+<ol class="sortable_tree" data-rebuild_url="<%= rebuild_categories_url %>">
+  <%= sortable_tree @categories, title: :label %>
+</ol>
+
 <table>
   <thead>
     <tr>

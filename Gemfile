@@ -37,6 +37,12 @@ gem 'redis', '~> 3.0' # Action Cable dependencies for the Redis adapter
 # An awesome replacement for acts_as_nested_set and better_nested_set.
 gem 'awesome_nested_set'
 
+gem 'jquery-ui-rails' # jQuery UI for the Rails asset pipeline
+
+# Nested Set + Drag&Drop GUI. Very fast! Best render helper! 2000
+# nodes/sec. Ready for rails 4
+gem "the_sortable_tree"
+
 # Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "less-rails"
 
